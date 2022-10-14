@@ -5,20 +5,18 @@
 #         self.next = next
 class Solution:
     def deleteMiddle(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        res=[]
         cur=head 
+        res=[]
         while cur:
             res.append(cur.val)
             cur=cur.next 
         #print(res)
         n=len(res)
-        mid=n//2 
-        #print(res[mid])
-        res_list=ListNode(0)
-        dummy=res_list 
-        for i in range(len(res)):
-            if i!=mid:
-                dummy.next=ListNode(res[i])
-                dummy=dummy.next 
-        return res_list.next
-        
+        mid=n//2
+        res.pop(mid)
+        dummy=ListNode(0)
+        cur=dummy 
+        for i in res:
+            cur.next=ListNode(i)
+            cur=cur.next 
+        return dummy.next
