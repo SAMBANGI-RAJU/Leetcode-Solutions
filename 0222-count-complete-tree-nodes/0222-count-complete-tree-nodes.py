@@ -7,12 +7,8 @@
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
         res=[]
-        def inorder(root):
-            if not root:
-                return 
-            inorder(root.left)
-            res.append(root.val)
-            inorder(root.right)
-        inorder(root)
-        return len(res)
-        
+        if not root:
+            return 0
+        left=self.countNodes(root.left)
+        right=self.countNodes(root.right)
+        return 1+left+right 
