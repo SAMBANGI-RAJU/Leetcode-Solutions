@@ -3,7 +3,7 @@ class Solution:
         max = 0
         cur=0
         for x in nums:
-            if x == 1:
+            if x:
                 cur+=1
                 if cur > max:
                     max = cur 
