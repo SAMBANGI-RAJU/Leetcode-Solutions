@@ -7,6 +7,5 @@ class Solution:
             else:
                 d[s[i]]+=1 
         #print(len(d))
-        if len(d)==26:
-            return True 
-        return False
+        return len(d)==26
+            
