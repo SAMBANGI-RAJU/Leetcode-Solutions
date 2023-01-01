@@ -11,8 +11,7 @@ class Solution:
             if s[i] not in d:
                 d[s[i]]=p[i]
             else:
-                x=d[s[i]]
-                if x!=p[i]:
+                if d[s[i]]!=p[i]:
                     return False 
         return True
                 
