@@ -10,6 +10,9 @@ class Solution:
         for i in arr:
             
             sum+=i
+            # if sum<0:
+            #     sum=0
+            
             maxi=max(maxi,sum)
             if sum<0:
                 sum=0
