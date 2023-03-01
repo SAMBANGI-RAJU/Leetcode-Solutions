@@ -9,5 +9,6 @@ class Solution:
                 d[str1]=[i]
             else:
                 d[str1].append(i)
-        res.extend(d.values())
-        return res
+        # res.extend(d.values())
+        # return res
+        return d.values()
