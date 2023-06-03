@@ -20,4 +20,4 @@ class Solution:
 
             #print(l)
 
-            return max(l, default=1)
+            return max(l,default=1)
