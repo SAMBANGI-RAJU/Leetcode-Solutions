@@ -4,7 +4,7 @@ class Solution:
         d=Counter(s)
         res=sorted(d,key=d.get,reverse=True)
         x=""
-        for i in res:
-            y=s.count(i)
-            x=x+(i*y)
+        #print(d[res[0]])
+        for i in range(len(res)):
+            x+=(res[i]*d[res[i]])
         return x
