@@ -1,10 +1,16 @@
-from collections import Counter
 class Solution:
     def frequencySort(self, s: str) -> str:
-        d=Counter(s)
-        res=sorted(d,key=d.get,reverse=True)
-        x=""
-        #print(d[res[0]])
-        for i in range(len(res)):
-            x+=(res[i]*d[res[i]])
-        return x
+        d={}
+        for i in s:
+            if i not in d:
+                d[i]=1 
+            else:
+                d[i]+=1 
+        sorted_dict = dict(sorted(d.items(), reverse=True,key=lambda item: item[1]))
+        res=''
+        for k,v in sorted_dict.items():
+            res+=(k*v)
+        return res
+
+        
+        
